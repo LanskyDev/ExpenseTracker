@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <script defer src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+        <p>Add a new item:</p>
+    </header>
+    <main>
+        <article id="formContainer" class="form-container">
+            <form action="/" id="expenseForm" class="expense-form">
+                <label for="placeInput">
+                    Place:
+                    <input type="text" class="form-control" id="placeInput" name="placeInput" placeholder="Where did you spend the money?" required maxlength="20">
+                </label>
+                <div>
+                    <label for="dateInput">
+                        Date:
+                        <input type="date" class="form-control" id="dateInput" name="dateInput" required>
+                    </label>
+                    <label for="amountInput">
+                        Amount:
+                        <input type="number" class="form-control" id="amountInput" name="amountInput" placeholder="How much did you spend?" required maxlength="20">
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Add Expense</button>
+            </form>
+        </article>
+        <article id="tableContainer" class="table-container">
+            <table id="expenseTable" class="expense-table">
+                <caption>
+                    Your expenses
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Place</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="expenseTableBody">
+                    <tr>
+                        <td colspan="4">No expenses added yet!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+    </main>
+</body>
+
+</html>
